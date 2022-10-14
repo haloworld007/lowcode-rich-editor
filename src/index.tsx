@@ -3,7 +3,10 @@ import { Editor, Toolbar } from '@wangeditor/editor-for-react';
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
 import '@wangeditor/editor/dist/css/style.css';
 
-interface IRichEditorProps {}
+interface IRichEditorProps {
+  editor: IEditorConfig;
+  toolbar: IToolbarConfig;
+}
 
 const RichEditor = (props: IRichEditorProps, ref: any) => {
   const [editor, setEditor] = useState<IDomEditor | null>(null);

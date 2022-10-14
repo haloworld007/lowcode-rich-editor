@@ -17,69 +17,89 @@ const SeadaRichEditorMeta: ComponentMetadata = {
   configure: {
     props: [
       {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'ref',
-            'zh-CN': 'ref',
-          },
-        },
         name: 'ref',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'FunctionSetter',
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      isRequired: false,
-                      props: {},
-                    },
-                  },
-                },
-                isRequired: false,
-                initialValue: {},
-              },
-            ],
-          },
+        title: {
+          label: 'ref',
+          tip: "ref | 通过 this.$('xxx') 获取到组件实例",
         },
+        setter: 'StringSetter',
       },
       {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'key',
-            'zh-CN': 'key',
+        name: 'toolbarConfig',
+        title: '工具栏配置',
+        display: 'block',
+        type: 'group',
+        items: [],
+      },
+      {
+        name: 'editorConfig',
+        title: '编辑器配置',
+        display: 'block',
+        type: 'group',
+        items: [
+          {
+            name: 'placeholder',
+            title: 'placeholder',
+            setter: 'StringSetter',
           },
-        },
-        name: 'key',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                isRequired: false,
-                initialValue: '',
+          {
+            name: 'readOnly',
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'readOnly',
+                'zh-CN': '只读',
               },
-              {
-                componentName: 'NumberSetter',
-                isRequired: false,
-                initialValue: 0,
-              },
-            ],
+              tip: 'readOnly | 是否只读',
+            },
+            setter: {
+              componentName: 'BoolSetter',
+              isRequired: false,
+              initialValue: false,
+            },
           },
-        },
+          {
+            name: 'autoFocus',
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'autoFocus',
+                'zh-CN': 'autoFocus',
+              },
+            },
+            setter: {
+              componentName: 'BoolSetter',
+              isRequired: false,
+              initialValue: true,
+            },
+          },
+        ],
       },
     ],
     supports: {
       style: true,
+      events: [
+        {
+          name: 'onCreated',
+          description: '编辑器创建完毕时的回调函数',
+        },
+        {
+          name: 'onChange',
+          description: '编辑器内容、选区变化时的回调函数',
+        },
+        {
+          name: 'onDestroy',
+          description: '编辑器销毁时的回调函数',
+        },
+        {
+          name: 'onFocus',
+          description: '编辑器获取焦点时的回调函数',
+        },
+        {
+          name: 'onBlur',
+          description: '编辑器失去焦点时的回调函数',
+        },
+      ],
     },
     component: {},
   },
