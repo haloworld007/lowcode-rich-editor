@@ -76,7 +76,7 @@ const type = 'component';
 
 if (devMode && type !== 'setter') {
   assets.packages.push({
-    "package": "rich-editor",
+    "package": "@seada/rich-editor",
     "version": "0.1.0",
     "library": "BizComp",
     "urls": ["/view.js"],
@@ -91,7 +91,7 @@ if (devMode && type !== 'setter') {
   assets.ignoreComponents = {};
 
   assets.components = [{
-    exportName: 'RichEditorMeta',
+    exportName: 'SeadaRichEditorMeta',
     url: metaType ? `/meta.${metaType}.js` : '/meta.js',
   }];
 }

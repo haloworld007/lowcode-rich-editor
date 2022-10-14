@@ -8,7 +8,7 @@ order: 1
 ```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import ExampleComponent from 'rich-editor';
+import ExampleComponent from '@seada/rich-editor';
 
 class App extends Component {
   render() {

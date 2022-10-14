@@ -1,4 +1,4 @@
-import RichEditorMeta from '/Users/ruhuotan/Project/rich-editor/lowcode/rich-editor/meta'
+import SeadaRichEditorMeta from '/Users/ruhuotan/Project/rich-editor/lowcode/seada-rich-editor/meta'
 
 const componentCategorySort = {};
 ["基础元素","布局容器类","表格类","表单详情类","帮助类","对话框类","业务类","通用","引导","信息输入","信息展示","信息反馈"]
@@ -78,7 +78,7 @@ function generateComponentList(components) {
   return componentList;
 }
 
-function fillRealVersion(meta, packageName = 'rich-editor', version = '0.1.0', basicLibraryVersion={"@alifd/next":"1.25.23","@alifd/meet":"2.6.3","antd":"4.17.3"}) {
+function fillRealVersion(meta, packageName = '@seada/rich-editor', version = '0.1.0', basicLibraryVersion={"@alifd/next":"1.25.23","@alifd/meet":"2.6.3","antd":"4.17.3"}) {
   if (!meta || !version) {
     return meta;
   }
@@ -100,7 +100,7 @@ function fillRealVersion(meta, packageName = 'rich-editor', version = '0.1.0', b
   return meta;
 }
 
-const componentMetas = [RichEditorMeta];
+const componentMetas = [SeadaRichEditorMeta];
 const components = [];
 const npmInfo = {};
 componentMetas.forEach(meta => {
@@ -164,5 +164,5 @@ export { components, componentList };
 const execCompile = !!false;
 
 if (!execCompile) {
-  window.RichEditorMeta = { components, componentList };
+  window.SeadaRichEditorMeta = { components, componentList };
 }

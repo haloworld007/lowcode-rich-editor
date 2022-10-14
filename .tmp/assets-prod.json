@@ -1,21 +1,21 @@
 {
   "packages": [
     {
-      "package": "rich-editor",
+      "package": "@seada/rich-editor",
       "version": "0.1.0",
       "library": "BizComp",
       "urls": [
-        "https://unpkg.com/rich-editor@0.1.0/build/lowcode/render/default/view.js",
-        "https://unpkg.com/rich-editor@0.1.0/build/lowcode/render/default/view.css"
+        "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/render/default/view.js",
+        "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/render/default/view.css"
       ],
       "editUrls": [
-        "https://unpkg.com/rich-editor@0.1.0/build/lowcode/view.js",
-        "https://unpkg.com/rich-editor@0.1.0/build/lowcode/view.css"
+        "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/view.js",
+        "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/view.css"
       ],
       "advancedUrls": {
         "default": [
-          "https://unpkg.com/rich-editor@0.1.0/build/lowcode/render/default/view.js",
-          "https://unpkg.com/rich-editor@0.1.0/build/lowcode/render/default/view.css"
+          "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/render/default/view.js",
+          "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/render/default/view.css"
         ]
       },
       "advancedEditUrls": {}
@@ -23,18 +23,18 @@
   ],
   "components": [
     {
-      "exportName": "RichEditorMeta",
+      "exportName": "SeadaRichEditorMeta",
       "npm": {
-        "package": "rich-editor",
+        "package": "@seada/rich-editor",
         "version": "0.1.0"
       },
-      "url": "https://unpkg.com/rich-editor@0.1.0/build/lowcode/meta.js",
+      "url": "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/meta.js",
       "urls": {
-        "default": "https://unpkg.com/rich-editor@0.1.0/build/lowcode/meta.js"
+        "default": "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/meta.js"
       },
       "advancedUrls": {
         "default": [
-          "https://unpkg.com/rich-editor@0.1.0/build/lowcode/meta.js"
+          "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/meta.js"
         ]
       }
     }

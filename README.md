@@ -1,8 +1,6 @@
-# demo component
+# @seada/rich-editor
 
-@alifd/example-component
-
-intro component
+基于 [wangEditor-for-React](https://github.com/wangeditor-team/wangEditor-for-react) 开发的富文本编辑器低代码组件。
 
 ## API
 
