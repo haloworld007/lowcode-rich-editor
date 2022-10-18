@@ -10,7 +10,7 @@ const SeadaRichEditorMeta: ComponentMetadata = {
     package: '@seada/rich-editor',
     version: '0.1.0',
     exportName: 'default',
-    main: 'src/index.tsx',
+    main: '',
     destructuring: false,
     subName: '',
   },
@@ -25,25 +25,34 @@ const SeadaRichEditorMeta: ComponentMetadata = {
         setter: 'StringSetter',
       },
       {
-        name: 'toolbarConfig',
-        title: '工具栏配置',
-        display: 'block',
-        type: 'group',
-        items: [],
-      },
-      {
         name: 'editorConfig',
         title: '编辑器配置',
         display: 'block',
         type: 'group',
         items: [
           {
-            name: 'placeholder',
-            title: 'placeholder',
-            setter: 'StringSetter',
+            name: 'defaultValue',
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'defaultValue',
+                'zh-CN': '默认值',
+              },
+              tip: '支持文本和html',
+            },
+            setter: ['TextAreaSetter', 'VariableSetter'],
           },
           {
-            name: 'readOnly',
+            name: 'editorConfig.placeholder',
+            title: 'placeholder',
+            setter: {
+              componentName: 'StringSetter',
+              isRequired: false,
+              initialValue: '请输入内容...',
+            },
+          },
+          {
+            name: 'editorConfig.readOnly',
             title: {
               label: {
                 type: 'i18n',
@@ -52,14 +61,17 @@ const SeadaRichEditorMeta: ComponentMetadata = {
               },
               tip: 'readOnly | 是否只读',
             },
-            setter: {
-              componentName: 'BoolSetter',
-              isRequired: false,
-              initialValue: false,
-            },
+            setter: [
+              {
+                componentName: 'BoolSetter',
+                isRequired: false,
+                initialValue: false,
+              },
+              'VariableSetter',
+            ],
           },
           {
-            name: 'autoFocus',
+            name: 'editorConfig.autoFocus',
             title: {
               label: {
                 type: 'i18n',
@@ -67,11 +79,14 @@ const SeadaRichEditorMeta: ComponentMetadata = {
                 'zh-CN': 'autoFocus',
               },
             },
-            setter: {
-              componentName: 'BoolSetter',
-              isRequired: false,
-              initialValue: true,
-            },
+            setter: [
+              {
+                componentName: 'BoolSetter',
+                isRequired: false,
+                initialValue: true,
+              },
+              'VariableSetter',
+            ],
           },
         ],
       },
@@ -79,10 +94,6 @@ const SeadaRichEditorMeta: ComponentMetadata = {
     supports: {
       style: true,
       events: [
-        {
-          name: 'onCreated',
-          description: '编辑器创建完毕时的回调函数',
-        },
         {
           name: 'onChange',
           description: '编辑器内容、选区变化时的回调函数',
