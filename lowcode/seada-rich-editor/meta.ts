@@ -6,6 +6,8 @@ const SeadaRichEditorMeta: ComponentMetadata = {
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
+  group: '默认分组',
+  category: '表单',
   npm: {
     package: '@seada/rich-editor',
     version: '0.1.0',

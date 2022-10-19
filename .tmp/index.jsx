@@ -13,7 +13,7 @@ if (!metaPathMap[key]) {
   metaType = fullbackMeta === 'default' ? '' : fullbackMeta;
 }
 const isNewEngineVersion = !!material;
-const devMode = !!false;
+const devMode = !!true;
 const baseLibrary = 'react';
 const basePackages = [
   {
@@ -72,16 +72,16 @@ let assetsName = './assets-dev.json';
 const setterMap = {
 };
 
-const type = '';
+const type = 'component';
 
 if (devMode && type !== 'setter') {
   assets.packages.push({
     "package": "@seada/rich-editor",
     "version": "0.1.0",
     "library": "BizComp",
-    "urls": ["build/lowcode/view.js","build/lowcode/view.css"],
-    "editUrls": ["build/lowcode/view.js","build/lowcode/view.css"],
-    "advancedUrls": {"default":["./render/default/view.js","./render/default/view.css"]},
+    "urls": ["/view.js"],
+    "editUrls": ["/view.js"],
+    "advancedUrls": {"default":["./default.view.js"]},
   });
   assets.groupList = ["精选组件","原子组件"];
   assets.sort = {
@@ -164,8 +164,8 @@ init(() => {
         });
         assets.groupList = devAssets.groupList;
       } else {
-        const extraAssets = false;
-        const builtinAssets = false;
+        const extraAssets = [];
+        const builtinAssets = [];
         extraAssets && await handleExtraAssets(assets, extraAssets);
         builtinAssets && await handleExtraAssets(assets, builtinAssets);
       }

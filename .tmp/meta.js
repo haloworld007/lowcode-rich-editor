@@ -161,7 +161,7 @@ const componentList = generateComponentList(components);
 
 export { components, componentList };
 
-const execCompile = !!true;
+const execCompile = !!false;
 
 if (!execCompile) {
   window.SeadaRichEditorMeta = { components, componentList };

@@ -11,7 +11,7 @@ export * from '/Users/ruhuotan/Project/rich-editor/src/index.tsx';
 const coveredComponents = {};
 
 const library = 'BizComp';
-const execCompile = !!true;
+const execCompile = !!false;
 
 if (!execCompile) {
   window[library] = Object.assign({__esModule: true}, componentInstances || {}, coveredComponents || {});
