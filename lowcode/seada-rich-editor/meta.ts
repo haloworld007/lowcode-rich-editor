@@ -61,14 +61,11 @@ const SeadaRichEditorMeta: ComponentMetadata = {
               },
               tip: 'readOnly | 是否只读',
             },
-            setter: [
-              {
-                componentName: 'BoolSetter',
-                isRequired: false,
-                initialValue: false,
-              },
-              'VariableSetter',
-            ],
+            setter: {
+              componentName: 'BoolSetter',
+              isRequired: false,
+              initialValue: false,
+            },
           },
           {
             name: 'editorConfig.autoFocus',
@@ -79,14 +76,11 @@ const SeadaRichEditorMeta: ComponentMetadata = {
                 'zh-CN': 'autoFocus',
               },
             },
-            setter: [
-              {
-                componentName: 'BoolSetter',
-                isRequired: false,
-                initialValue: true,
-              },
-              'VariableSetter',
-            ],
+            setter: {
+              componentName: 'BoolSetter',
+              isRequired: false,
+              initialValue: true,
+            },
           },
         ],
       },
