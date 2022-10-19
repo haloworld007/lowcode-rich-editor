@@ -4,6 +4,7 @@ import React, {
   ForwardRefRenderFunction,
   useEffect,
   useState,
+  useImperativeHandle,
 } from 'react';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
@@ -22,8 +23,6 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
   // 编辑器内容
   const [html, setHtml] = useState(defaultValue);
 
-  console.log('editor ref:', ref);
-
   // 工具栏配置
   const toolbarConfig: Partial<IToolbarConfig> = {};
 
@@ -35,6 +34,10 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
       setEditor(null);
     };
   }, [editor]);
+
+  useImperativeHandle(ref, () => ({
+    editor,
+  }));
 
   return (
     <div ref={ref} style={{ ...(style || {}) }}>

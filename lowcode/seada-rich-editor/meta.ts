@@ -22,6 +22,9 @@ const SeadaRichEditorMeta: ComponentMetadata = {
           label: 'ref',
           tip: "ref | 通过 this.$('xxx') 获取到组件实例",
         },
+        defaultValue: () => {
+          return `rich_editor_${new Date().valueOf()}`;
+        },
         setter: 'StringSetter',
       },
       {
