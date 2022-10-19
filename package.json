@@ -67,5 +67,8 @@
     "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/assets-prod.json"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.0/build/index.html"
+  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.0/build/index.html",
+  "publishConfig": {
+    "access": "public"
+  }
 }
