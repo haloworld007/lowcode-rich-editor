@@ -1,6 +1,6 @@
 {
   "name": "@seada/rich-editor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "rich-editor",
   "files": [
     "demo/",
@@ -66,10 +66,10 @@
     "name": "ExampleComponent",
     "title": "demo component",
     "category": "Information",
-    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.2/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.3/build/lowcode/assets-prod.json"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.2/build/index.html",
+  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.3/build/index.html",
   "publishConfig": {
     "access": "public"
   }
