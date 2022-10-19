@@ -2,9 +2,9 @@ import { ComponentMetadata, Snippet } from '@alilc/lowcode-types';
 
 const SeadaRichEditorMeta: ComponentMetadata = {
   componentName: 'RichEditor',
-  title: 'RichEditor',
+  title: '富文本编辑器',
   docUrl: '',
-  screenshot: '',
+  screenshot: 'https://cdn.scredit.sg/id/seada/live/rich_editor.png',
   devMode: 'proCode',
   group: '默认分组',
   category: '表单',
@@ -122,8 +122,8 @@ const SeadaRichEditorMeta: ComponentMetadata = {
 };
 const snippets: Snippet[] = [
   {
-    title: 'RichEditor',
-    screenshot: '',
+    title: '富文本编辑器',
+    screenshot: 'https://cdn.scredit.sg/id/seada/live/rich_editor.png',
     schema: {
       componentName: 'RichEditor',
       props: {},
