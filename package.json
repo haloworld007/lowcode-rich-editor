@@ -18,13 +18,13 @@
     "lowcode:dev": "build-scripts start --config ./build.lowcode.js",
     "lowcode:build": "build-scripts build --config ./build.lowcode.js",
     "test": "build-scripts test",
-    "prepublishOnly": "npm run build && npm run lowcode:build",
     "eslint": "eslint --cache --ext .js,.jsx ./",
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint \"**/*.{css,scss,less}\"",
     "lint": "npm run eslint && npm run stylelint",
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix",
+    "preversion": "npm run build && npm run lowcode:build",
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major"
@@ -66,10 +66,10 @@
     "name": "ExampleComponent",
     "title": "demo component",
     "category": "Information",
-    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.0/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.1/build/lowcode/assets-prod.json"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.0/build/index.html",
+  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.1/build/index.html",
   "publishConfig": {
     "access": "public"
   }

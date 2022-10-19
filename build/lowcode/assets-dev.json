@@ -2,7 +2,7 @@
   "packages": [
     {
       "package": "@seada/rich-editor",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "library": "BizComp",
       "urls": [
         "./render/default/view.js",
@@ -26,7 +26,7 @@
       "exportName": "SeadaRichEditorMeta",
       "npm": {
         "package": "@seada/rich-editor",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
       "url": "./meta.js",
       "urls": {

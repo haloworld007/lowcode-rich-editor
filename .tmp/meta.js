@@ -78,7 +78,7 @@ function generateComponentList(components) {
   return componentList;
 }
 
-function fillRealVersion(meta, packageName = '@seada/rich-editor', version = '0.1.0', basicLibraryVersion={"@alifd/next":"1.25.23","@alifd/meet":"2.6.3","antd":"4.17.3"}) {
+function fillRealVersion(meta, packageName = '@seada/rich-editor', version = '0.1.1', basicLibraryVersion={"@alifd/next":"1.25.23","@alifd/meet":"2.6.3","antd":"4.17.3"}) {
   if (!meta || !version) {
     return meta;
   }
@@ -161,7 +161,7 @@ const componentList = generateComponentList(components);
 
 export { components, componentList };
 
-const execCompile = !!false;
+const execCompile = !!true;
 
 if (!execCompile) {
   window.SeadaRichEditorMeta = { components, componentList };
