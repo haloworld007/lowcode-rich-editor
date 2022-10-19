@@ -49,7 +49,13 @@ const SeadaRichEditorMeta: ComponentMetadata = {
           },
           {
             name: 'editorConfig.placeholder',
-            title: 'placeholder',
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'placeholder',
+                'zh-CN': '占位提示',
+              },
+            },
             setter: {
               componentName: 'StringSetter',
               isRequired: false,

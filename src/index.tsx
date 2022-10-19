@@ -14,10 +14,13 @@ interface IRichEditorProps {
   defaultValue?: string;
   editorConfig: IEditorConfig;
   style?: CSSProperties;
+  __designMode?: string;
 }
 
 const RichEditor = (props: IRichEditorProps, ref: any) => {
-  const { editorConfig, defaultValue, style } = props;
+  const { editorConfig, defaultValue, style, __designMode } = props;
+
+  const isDesignMode = __designMode === 'design';
 
   const [editor, setEditor] = useState<IDomEditor | null>(null);
   // 编辑器内容
@@ -41,13 +44,19 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
 
   return (
     <div ref={ref} style={{ ...(style || {}) }}>
-      <Toolbar defaultConfig={toolbarConfig} mode="default" editor={editor} />
+      <Toolbar
+        defaultConfig={toolbarConfig}
+        mode="default"
+        editor={editor}
+        style={{ pointerEvents: isDesignMode ? 'none' : 'auto' }}
+      />
       <Editor
         defaultConfig={editorConfig} // 默认配置
         onCreated={setEditor}
         mode="default"
         onChange={(domEditor) => setHtml(domEditor.getHtml())}
         value={html}
+        style={{ pointerEvents: isDesignMode ? 'none' : 'auto' }}
       />
     </div>
   );
