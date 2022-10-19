@@ -48,7 +48,7 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
         defaultConfig={toolbarConfig}
         mode="default"
         editor={editor}
-        style={{ pointerEvents: isDesignMode ? 'none' : 'auto' }}
+        style={{ pointerEvents: isDesignMode ? 'none' : 'auto', borderBottom: '1px solid #ccc' }}
       />
       <Editor
         defaultConfig={editorConfig} // 默认配置

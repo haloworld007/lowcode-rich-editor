@@ -126,7 +126,13 @@ const snippets: Snippet[] = [
     screenshot: 'https://cdn.scredit.sg/id/seada/live/rich_editor.png',
     schema: {
       componentName: 'RichEditor',
-      props: {},
+      props: {
+        style: {
+          borderWidth: '1px',
+          borderColor: '#cccccc',
+          borderStyle: 'solid',
+        },
+      },
     },
   },
 ];
