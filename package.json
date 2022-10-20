@@ -66,10 +66,10 @@
     "name": "ExampleComponent",
     "title": "demo component",
     "category": "Information",
-    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.6/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@seada/rich-editor@0.1.7/build/lowcode/assets-prod.json"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.6/build/index.html",
+  "homepage": "https://unpkg.com/@seada/rich-editor@0.1.7/build/index.html",
   "publishConfig": {
     "access": "public"
   }
