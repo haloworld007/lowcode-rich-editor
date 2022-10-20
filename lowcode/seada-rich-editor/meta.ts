@@ -4,7 +4,7 @@ const SeadaRichEditorMeta: ComponentMetadata = {
   componentName: 'RichEditor',
   title: '富文本编辑器',
   docUrl: '',
-  screenshot: 'https://cdn.scredit.sg/id/seada/live/rich_editor.png',
+  screenshot: require('./rich_editor.png'),
   devMode: 'proCode',
   group: '默认分组',
   category: '表单',
@@ -123,7 +123,7 @@ const SeadaRichEditorMeta: ComponentMetadata = {
 const snippets: Snippet[] = [
   {
     title: '富文本编辑器',
-    screenshot: 'https://cdn.scredit.sg/id/seada/live/rich_editor.png',
+    screenshot: require('./rich_editor.png'),
     schema: {
       componentName: 'RichEditor',
       props: {
