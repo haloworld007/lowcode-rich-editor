@@ -1,6 +1,6 @@
 {
   "name": "@seada/rich-editor",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "rich-editor",
   "files": [
     "demo/",
