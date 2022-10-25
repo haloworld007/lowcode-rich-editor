@@ -36,6 +36,33 @@ const SeadaRichEditorMeta: ComponentMetadata = {
         type: 'group',
         items: [
           {
+            name: 'language',
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'language',
+                'zh-CN': '语言',
+              },
+              tip: '属性不支持动态刷新，需要刷新页面才生效',
+            },
+            setter: {
+              componentName: 'SelectSetter',
+              props: {
+                options: [
+                  {
+                    title: 'zh-CN',
+                    value: 'zh-CN',
+                  },
+                  {
+                    title: 'en',
+                    value: 'en',
+                  },
+                ],
+              },
+              initialValue: 'zh-CN',
+            },
+          },
+          {
             name: 'defaultValue',
             title: {
               label: {

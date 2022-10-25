@@ -7,7 +7,7 @@ import React, {
   useImperativeHandle,
 } from 'react';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
-import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
+import { IDomEditor, IEditorConfig, IToolbarConfig, i18nChangeLanguage } from '@wangeditor/editor';
 import '@wangeditor/editor/dist/css/style.css';
 
 interface IRichEditorProps {
@@ -15,10 +15,11 @@ interface IRichEditorProps {
   editorConfig: IEditorConfig;
   style?: CSSProperties;
   __designMode?: string;
+  language?: 'zh-CN' | 'en';
 }
 
 const RichEditor = (props: IRichEditorProps, ref: any) => {
-  const { editorConfig, defaultValue, style, __designMode } = props;
+  const { editorConfig, defaultValue, style, __designMode, language } = props;
 
   const isDesignMode = __designMode === 'design';
 
@@ -28,6 +29,9 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
 
   // 工具栏配置
   const toolbarConfig: Partial<IToolbarConfig> = {};
+
+  // 不支持动态刷新语言
+  i18nChangeLanguage(language || 'zh-CN');
 
   // 及时销毁editor
   useEffect(() => {
