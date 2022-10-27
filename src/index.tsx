@@ -16,10 +16,18 @@ interface IRichEditorProps {
   style?: CSSProperties;
   __designMode?: string;
   language?: 'zh-CN' | 'en';
+  onChange?: (editor: IDomEditor) => void;
 }
 
 const RichEditor = (props: IRichEditorProps, ref: any) => {
-  const { editorConfig, defaultValue, style, __designMode, language } = props;
+  const {
+    editorConfig,
+    defaultValue,
+    style,
+    __designMode,
+    language,
+    onChange: onTextChange,
+  } = props;
 
   const isDesignMode = __designMode === 'design';
 
@@ -58,7 +66,10 @@ const RichEditor = (props: IRichEditorProps, ref: any) => {
         defaultConfig={editorConfig} // 默认配置
         onCreated={setEditor}
         mode="default"
-        onChange={(domEditor) => setHtml(domEditor.getHtml())}
+        onChange={(domEditor) => {
+          setHtml(domEditor.getHtml());
+          onTextChange?.(domEditor);
+        }}
         value={html}
         style={{ pointerEvents: isDesignMode ? 'none' : 'auto' }}
       />
